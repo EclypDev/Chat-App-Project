@@ -1,0 +1,385 @@
+:root {
+    --main-color: #7fff7f;
+    --error-color: #fe3c45;
+    --hover-buy: #48995d;
+    --hover-sell: #d9373f;
+    --hover-info: #218bdf;
+    --background-color: #161616;
+    --second-background: #1f2124;
+    --third-background: #23272a;
+    --fourth-background: #1e1e29;
+    --package-border: #2c2f33;
+    --hover-text: #2c2f33;
+    --border: 5px;
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #aeaeae;
+    --green-button: #4da564;
+    --font-family: Montserrat, sans-serif;
+    --opacity-image: 0.8;
+    --blur-image: 5px;
+    --accent-color: #ca6201;
+    --link-color: #007bff;
+    --highlight-color: #ff6b6b;
+    --dark-text-color: #333333;
+    --light-text-color: #f5f5f5;
+    --neutral-color: #cccccc;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    min-width: 300px;
+    display: grid;
+  }
+  
+  main {
+    display: flex;
+    height: 100vh;
+  }
+  
+  
+  h1, h3 {
+    color: var(--hover-buy);
+    text-align: center;
+  }
+  
+  hr {
+    color: #666666;
+    margin: 0;
+  }
+  .div-line {
+    text-align: center;
+    font-size: 15px;
+    color: #666666;
+  }
+  
+  .subtitles {
+    width: auto;
+    border-radius: var(--border);
+    background-color: var(--green-button);
+  }
+  #line {
+    color: #666666;
+  }
+  #canal-selection {
+    border-radius: var(--border);
+    display: inline-block;
+    height: 98vh;
+    border-radius: var(--border);
+    margin: 7px;
+    width: 60px;
+    border: 1px solid var(--package-border);
+    display: flex;
+    justify-content: left;
+  }
+  
+  .canal {
+  
+    margin: 5px;
+    margin-right: 10px;
+  }
+  
+  [data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%; /* Coloca el tooltip arriba del elemento */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    opacity: 0;
+    margin: 20px;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in;
+  }
+  .custom-tooltip {
+    padding: 10px;
+    background-color: #171718;
+    color: #aeaeae;
+    min-width: 150px;
+    z-index: 20;
+  }
+  [data-tooltip]:hover::after {
+    margin: 20px;
+    opacity: 1; /* Muestra el tooltip al hacer hover */
+  }
+  
+  .canal svg {
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    color: var(--green-button);
+  }
+  
+  .canal svg:hover {
+    color: var(--hover-buy);
+    cursor: pointer;
+    scale: 1.05;
+  }
+  
+  #work {
+    border-radius: var(--border);
+    
+    height: auto;
+    max-height: 100vh;
+    margin: 10px;
+    width: 100%;
+    border: 1px solid var(--package-border);
+    background-color: var(--second-background);
+  }
+  .bar {
+    background-color: #272727;
+  }
+  #chat-bar {
+    border-radius: var(--border);
+    height: 50px;
+    margin: 5px;
+    justify-content: center;
+  }
+  
+  #area {
+    height: 93%;
+    width: 100%;
+    border-top-left-radius: var(--border);
+    border-top-right-radius: var(--border);
+    border: 1px solid var(--package-border);
+    justify-content: center;
+    bottom: 0;
+    padding: 20px;
+    overflow-y: scroll;
+    max-height: 100%;
+  }
+  
+  /* Estilos del scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    /* Ancho del scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #161616;
+    /* Color del fondo del track del scrollbar */
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #2c2c3c;
+    /* Color del thumb (la parte que se desplaza) del scrollbar */
+    border-radius: 5px;
+  }
+  
+  
+  
+  .response p {
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+    min-width: 30%;
+    max-width: 70%;
+    color: var(--secondary-text-color);
+  
+    border-radius: var(--border);
+  }
+  
+  
+  
+  .response p p {
+    border: none;
+    margin: 0;
+  }
+  
+  .request p span {
+    color: var(--fourth-background);
+    font-size: 12px;
+  }
+  
+  .request p {
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+    max-width: 70%;
+    color: var(--secondary-text-color);
+    border-radius: var(--border);
+  }
+  
+  .response p span {
+    color: var(--fourth-background);
+    font-size: 12px;
+  }
+  
+  .avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+  
+  .right {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+  }
+  
+  .left {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+  }
+  .message {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #1f212400;
+    border-radius: 5px;
+    margin: 10px;
+    color: var(--light-text-color);
+    max-width: 98vh;
+  }
+  
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .message-content {
+    max-width: 95%;
+    word-wrap: break-word;
+  }
+  
+  h2 {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    width: 97%;
+    padding: 10px;
+    flex-grow: 1;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-input {
+    margin: 0;
+    width: 100%;
+    resize: none;
+    border: 0;
+    background: transparent;
+    padding-right: 10px;
+    outline: none;
+    font-size: 16px;
+    max-height: 200px;
+    height: 24px;
+    overflow-y: hidden;
+  }
+  
+  .send-btn {
+    position: absolute;
+    padding: 1px;
+    border-radius: 5px;
+    right: 2px;
+    bottom: 1.5px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .send-btn svg {
+    height: 30px;
+    width: 30px;
+  }
+  #send-button:hover {
+    color: var(--green-button);
+    scale: 1.1;
+  }
+  #send-button:active {
+    color: var(--green-button);
+    scale: 1.0;
+  }
+  
+  
+  .message-content p {
+    margin: 5px;
+  }
+  .message-content h1:hover, p:hover, li:hover {
+    background-color: var(--hover-text);
+  }
+  .message-content h2:hover {
+    cursor: pointer;
+  
+    width: auto;
+  }
+  /* Estilo para el contenedor principal del embed */
+  .embed {
+    padding: 10px;
+    margin: 10px;
+    max-width: 400px; /* Ancho máximo del embed */
+    border-radius: 15px;
+    border-top: red solid 10px;
+    background-color: #222121;
+    margin-left: 78px;
+    color: #aeaeae;
+  }
+  .toEmbed {
+    padding: 10px;
+    margin: 10px;
+    max-width: 400px; /* Ancho máximo del embed */
+    border-radius: 15px;
+    border-top: var(--green-button) solid 10px;
+    background-color: #222121;
+    color: #aeaeae;
+  }
+  .toEmbed h2 {
+    font-size: 12px;
+  }
+  
+  /* Estilo para el autor (nombre e icono) */
+  .embed-author {
+    display: flex;
+    align-items: center;
+  }
+  
+  .embed-author img {
+    width: 24px; /* Tamaño del icono del autor */
+    height: 24px;
+    border-radius: 50%; /* Para hacer un icono circular */
+    margin-right: 10px; /* Espacio entre el icono y el nombre */
+  }
+  
+  /* Estilo para los campos (nombre y valor) */
+  .embed-fields {
+    color: #aeaeae;
+    margin-top: 10px; /* Espacio entre el autor y los campos */
+  }
+  
+  .embed-field {
+    margin-bottom: 5px; /* Espacio entre campos */
+  }
+  
+  .embed-field-name {
+    font-weight: bold;
+    color: #333; /* Color del nombre del campo */
+  }
+  
+  .embed-field-value {
+    color: #666; /* Color del valor del campo */
+  }
+  

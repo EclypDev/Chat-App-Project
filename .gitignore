@@ -1,0 +1,9 @@
+# Ignorar archivos de bloqueo de paquetes generados por npm y yarn
+package-lock.json
+yarn.lock
+
+# Ignorar la carpeta node_modules completa
+node_modules/
+
+# Ignora el archivo .env
+.env

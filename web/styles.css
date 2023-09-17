@@ -14,7 +14,6 @@
     --primary-text-color: #ffffff;
     --secondary-text-color: #aeaeae;
     --green-button: #4da564;
-    --font-family: Montserrat, sans-serif;
     --opacity-image: 0.8;
     --blur-image: 5px;
     --accent-color: #ca6201;
@@ -26,7 +25,6 @@
   }
   
   body {
-    font-family: var(--font-family);
     margin: 0;
     padding: 0;
     background-color: var(--background-color);

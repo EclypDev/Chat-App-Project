@@ -14,7 +14,6 @@
     --primary-text-color: #ffffff;
     --secondary-text-color: #aeaeae;
     --green-button: #4da564;
-    --font-family: Montserrat, sans-serif;
     --opacity-image: 0.8;
     --blur-image: 5px;
     --accent-color: #ca6201;
@@ -26,7 +25,6 @@
   }
   
   body {
-    font-family: var(--font-family);
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
@@ -54,7 +52,13 @@
     font-size: 15px;
     color: #666666;
   }
-  
+  .btn {
+    border-radius: var(--border);
+    border: none
+  }
+  .white-text {
+    color: var(--primary-text-color);
+  }
   .subtitles {
     width: auto;
     border-radius: var(--border);
@@ -106,7 +110,7 @@
     margin: 20px;
     opacity: 1; /* Muestra el tooltip al hacer hover */
   }
-  
+
   .canal svg {
     margin: 5px;
     height: 40px;
@@ -119,7 +123,19 @@
     cursor: pointer;
     scale: 1.05;
   }
-  
+  #goDown {
+    position: absolute;
+    right: 20px;
+    bottom: 80px;
+    margin: 10px; 
+    transition: all 0.3s ease; 
+    transform: translateY(5px);
+    color: var(--background-color);
+  }
+  #goDown:hover {
+    color: var(--primary-text-color);
+    transform: translateY(-5px);
+  }
   #work {
     border-radius: var(--border);
     
@@ -230,6 +246,7 @@
     justify-content: left;
   }
   .message {
+
     display: flex;
     flex: 1;
     align-items: flex-start;
@@ -240,7 +257,9 @@
     color: var(--light-text-color);
     max-width: 98vh;
   }
-  
+  .message:hover {
+    background-color: #26282b00;
+  }
   img {
     width: 50px;
     height: 50px;
@@ -254,12 +273,18 @@
   }
   
   h2 {
-    font-size: 16px;
+    font-family: 'gg sans';
+    font-size: 18px;
     margin: 0;
+  }
+  h2:hover {
+    text-decoration: underline;
+
   }
   
   p {
-    font-size: 14px;
+    font-family: 'gg sans Normal';
+    font-size: 16px;
     margin: 0;
   }
   
@@ -382,4 +407,5 @@
   .embed-field-value {
     color: #666; /* Color del valor del campo */
   }
-  
+
+

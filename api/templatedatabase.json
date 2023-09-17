@@ -34,7 +34,7 @@
             "messages": [
                 {
                     "id": 0,
-                    "msg": "Canal numero 1",
+                    "text": "Canal numero 1",
                     "img": "https://www.clipartmax.com/png/full/419-4197602_gnar-bot-is-a-imagenes-para-perfil-de-discord.png",
                     "channel": "123",
                     "authorID": "1",
